@@ -5,5 +5,6 @@
 ## How to do it?
 ```bash
 git clone https://gitlab.com/pouya-abbasian/dns-fixer
+./installer.sh
 ```
  
