@@ -20,14 +20,14 @@ else
 		    echo -e "\033[91m[-]You Have Dns ERROR! "
 		    read -p "I cat To Ok That, Do You Want To Contniue?[Y/n] " yesorno
 		    if [ "$yesorno" == "Y" ] || [ "$yesorno" == "y" ] || [ "$yesorno" == "" ];then
-		    	echo "nameserver 208.67.222.222\nnameserver 8.8.8.8" | sudo tee /etc/resolvconf/resolv.conf.d/tail
+		    	echo "nameserver 208.67.222.222\nnameserver 8.8.8.8" | sudo tee /etc/resolvconf/resolv.conf.d/tail >/dev/null
 				sudo systemctl restart NetworkManager
 			else
 				echo "Ok, You Need To Fix it." 
 				exit 1
 		    fi
 		else
-    		echo -e "\033[92m][+]Your DNS Is OK!"
+    		echo -e "\033[92m[+]Your DNS Is OK!"
 			exit 0
 		fi
 ##End Of DNS Checking.
