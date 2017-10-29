@@ -15,7 +15,7 @@ else
 	else
 		echo -e "\033[92m[+]Your Internet Is OK!"
 		##Start DNS Checking
-		nslookup gnu.org -timeout=1 1>/dev/null 2>/dev/null 1>/dev/null>null 2>/dev/null 
+		nslookup gnu.org -timeout=1 1>/dev/null 2>/dev/null 
 		if [ "$?" != "0" ];then
 			echo -e "\033[91m[-]You Have Dns ERROR! "
 			read -p "I cat To Ok That, Do You Want To Contniue?[Y/n] " yesorno
